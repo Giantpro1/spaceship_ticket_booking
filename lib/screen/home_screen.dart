@@ -5,6 +5,7 @@ import 'package:spaceship_ticket_booking/screen/hotels_screen.dart';
 import 'package:spaceship_ticket_booking/screen/ticket_view.dart';
 import 'package:spaceship_ticket_booking/utils/app_info_list.dart';
 import 'package:spaceship_ticket_booking/utils/app_style.dart';
+import 'package:spaceship_ticket_booking/widgets/mul_text_wid.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -69,24 +70,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcoming Flight",
-                      style: Styles.headLineStyle2,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Text(
-                        "View All",
-                        style: Styles.textStyle.copyWith(
-                          color: Styles.primaryColor,
-                        ),
-                      ),
-                    ),
-                  ],
-                )
+                const MultTextWid(firstText: "Upcoming Flight", secondText: "View All"),
               ],
             ),
           ),
@@ -99,24 +83,7 @@ class HomeScreen extends StatelessWidget {
           const Gap(15),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: Styles.headLineStyle2,
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Text(
-                    "View All",
-                    style: Styles.textStyle.copyWith(
-                      color: Styles.primaryColor,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            child: const MultTextWid(firstText: "Hotels", secondText: "View All"),
           ),
           const Gap(15),
           SingleChildScrollView(
