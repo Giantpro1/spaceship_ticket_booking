@@ -1,7 +1,9 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:spaceship_ticket_booking/screen/hotels_screen.dart';
 import 'package:spaceship_ticket_booking/screen/ticket_view.dart';
+import 'package:spaceship_ticket_booking/utils/app_info_list.dart';
 import 'package:spaceship_ticket_booking/utils/app_style.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -92,10 +94,7 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
-            child: Row(children: const [
-              TicketView(),
-              TicketView(),
-            ]),
+            child: Row(children: ticketList.map((singleTicket) => TicketView(tickets: singleTicket)).toList()),
           ),
           const Gap(15),
           Container(
@@ -121,13 +120,13 @@ class HomeScreen extends StatelessWidget {
           ),
           const Gap(15),
           SingleChildScrollView(
-             scrollDirection: Axis.horizontal,
+            scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
-            child: Row(children: const [
-              HomeScreen(),
-              HomeScreen(),
-            ],),),
-
+            child: Row(
+              children:
+                  hotelList.map((singleHotel) => HotelScreen(hotel: singleHotel)).toList(),
+            ),
+          ),
         ],
       ),
     );
