@@ -4,7 +4,6 @@ import 'package:gap/gap.dart';
 import 'package:spaceship_ticket_booking/screen/ticket_view.dart';
 import 'package:spaceship_ticket_booking/utils/app_style.dart';
 
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -18,7 +17,7 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                  const Gap(20),
+                const Gap(20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -98,6 +97,37 @@ class HomeScreen extends StatelessWidget {
               TicketView(),
             ]),
           ),
+          const Gap(15),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Hotels",
+                  style: Styles.headLineStyle2,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "View All",
+                    style: Styles.textStyle.copyWith(
+                      color: Styles.primaryColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Gap(15),
+          SingleChildScrollView(
+             scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(children: const [
+              HomeScreen(),
+              HomeScreen(),
+            ],),),
+
         ],
       ),
     );
