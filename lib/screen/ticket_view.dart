@@ -7,7 +7,8 @@ import 'package:spaceship_ticket_booking/widgets/continer_thick.dart';
 
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> tickets;
-  const TicketView({super.key, required this.tickets});
+  final bool? isColor;
+  const TicketView({super.key, required this.tickets, required this.isColor});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class TicketView extends StatelessWidget {
             // container responsible for showing the blue color
             Container(
               decoration:  BoxDecoration(
-                color: const Color(0xFF526799),
+                color: isColor==null? const Color(0xFF526799) :Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(AppLayOut.getHeight(21)),
                   topRight: const Radius.circular(21),
@@ -37,10 +38,10 @@ class TicketView extends StatelessWidget {
                       Text(
                         tickets['from']['code'],
                         style:
-                            Styles.headLineStyle3.copyWith(color: Colors.white),
+                          isColor==null?  Styles.headLineStyle3.copyWith(color: Colors.white): Styles.headLineStyle3,
                       ),
                       Expanded(child: Container()),
-                      const ThickContainer(),
+                      const ThickContainer(isColor: null,),
                       Expanded(
                         child: Stack(
                           children: [
@@ -83,7 +84,7 @@ class TicketView extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const ThickContainer(),
+                      const ThickContainer(isColor: null,),
                       Expanded(child: Container()),
                       Text(
                         tickets['to']['code'],
