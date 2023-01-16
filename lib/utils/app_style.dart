@@ -12,7 +12,7 @@ Color primary = const Color(0xFF687daf);
    static TextStyle textStyle = TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
    static TextStyle headLineStyle1 = TextStyle(fontSize: 26, color: textColor, fontWeight: FontWeight.bold);
    static TextStyle headLineStyle2 = TextStyle(fontSize: 21, color: textColor, fontWeight: FontWeight.bold);
-   static TextStyle headLineStyle3 = const TextStyle(fontSize: 17, color: Color(0xFF9E9E9E), fontWeight: FontWeight.w500);
+   static TextStyle headLineStyle3 = const TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
    static TextStyle headLineStyle4 = const TextStyle(fontSize: 14, color: Color(0xFF9E9E9E), fontWeight: FontWeight.w500);
   
  } 

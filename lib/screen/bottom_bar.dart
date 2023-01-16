@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:spaceship_ticket_booking/screen/home_screen.dart';
+import 'package:spaceship_ticket_booking/screen/profile_screen.dart';
 import 'package:spaceship_ticket_booking/screen/search_screen.dart';
 import 'package:spaceship_ticket_booking/screen/ticket_screen.dart';
 
@@ -16,7 +17,7 @@ class _BottomBarState extends State<BottomBar> {
     const HomeScreen(),
     const SearchScreen(),
     const TicketScreen(),
-    const Text('Profile'),
+    const ProfileScreen(),
   ];
   void _onItemTapped(int index){
    setState(() {

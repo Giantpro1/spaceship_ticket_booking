@@ -19,7 +19,7 @@ class AppTickTab extends StatelessWidget {
               child: Row(children: [
                 // airline ticket
                 Container(
-                  width: size.width * .44,
+                  width: size.width*0.44,
                   padding:
                       EdgeInsets.symmetric(vertical: AppLayOut.getHeight(7)),
                   decoration: BoxDecoration(
@@ -32,7 +32,7 @@ class AppTickTab extends StatelessWidget {
                 ),
                 // hotels
                 Container(
-                  width: size.width * .44,
+                  width: size.width*0.44,
                   padding:
                       EdgeInsets.symmetric(vertical: AppLayOut.getHeight(7)),
                   decoration: BoxDecoration(
