@@ -139,7 +139,7 @@ class TicketScreen extends StatelessWidget {
                 height: 1,
               ),
               Container(
-                color: Colors.white,
+                // color: Colors.white,
                 margin: EdgeInsets.only(
                     left: AppLayOut.getHeight(15),
                     right: AppLayOut.getHeight(15)),

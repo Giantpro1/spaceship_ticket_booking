@@ -151,12 +151,12 @@ class SearchScreen extends StatelessWidget {
                   ),
                   Gap(AppLayOut.getHeight(15)),
                   Container(
+                    width: size.width * 0.44,
+                    height: AppLayOut.getHeight(200),
                     padding: EdgeInsets.symmetric(
                       vertical: AppLayOut.getHeight(15),
                       horizontal: AppLayOut.getHeight(15),
                     ),
-                    width: size.width * 0.44,
-                    height: AppLayOut.getHeight(210),
                     decoration: BoxDecoration(
                       borderRadius:
                           BorderRadius.circular(AppLayOut.getHeight(18)),
@@ -176,7 +176,7 @@ class SearchScreen extends StatelessWidget {
                             children: [
                               TextSpan(
                                 text: '😍',
-                                style: TextStyle(fontSize: 38),
+                                style: TextStyle(fontSize: 32),
                               ),
                               TextSpan(
                                 text: '🥰',
@@ -184,7 +184,7 @@ class SearchScreen extends StatelessWidget {
                               ),
                               TextSpan(
                                 text: '😘',
-                                style: TextStyle(fontSize: 38),
+                                style: TextStyle(fontSize: 32),
                               ),
                             ],
                           ),
