@@ -8,7 +8,6 @@ import 'package:spaceship_ticket_booking/utils/app_style.dart';
 import 'package:spaceship_ticket_booking/widgets/app_ticket_tab.dart';
 import 'package:spaceship_ticket_booking/widgets/tick_layout_comm.dart';
 import 'package:spaceship_ticket_booking/widgets/ticket_view_Column.dart';
-import 'package:barcode/barcode.dart';
 
 class TicketScreen extends StatelessWidget {
   const TicketScreen({super.key});
